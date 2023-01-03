@@ -1,0 +1,33 @@
+[gd_scene format=2]
+
+[node name="Particles" type="Node2D"]
+position = Vector2( 160, -100 )
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 532, -118 )
+z_index = -20
+amount = 300
+lifetime = 20.0
+preprocess = 10.0
+emission_shape = 2
+emission_rect_extents = Vector2( 180, 10 )
+direction = Vector2( -1, 0 )
+spread = 0.0
+gravity = Vector2( 0, 5 )
+initial_velocity = 50.0
+color = Color( 0.113725, 0.168627, 0.32549, 1 )
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2( 393, -116 )
+z_index = -20
+amount = 300
+lifetime = 10.0
+preprocess = 10.0
+emission_shape = 2
+emission_rect_extents = Vector2( 180, 10 )
+direction = Vector2( -1, 0 )
+spread = 0.0
+gravity = Vector2( 0, 10 )
+initial_velocity = 50.0
+scale_amount = 1.1
+color = Color( 0.160784, 0.678431, 1, 1 )

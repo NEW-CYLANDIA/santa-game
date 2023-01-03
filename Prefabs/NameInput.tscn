@@ -1,0 +1,82 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Fonts/CasualEncounter.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Sprites/arrow.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/NameInput.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/LetterInput.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="NameInput" type="Node2D"]
+script = ExtResource( 3 )
+letter_input_paths = [ NodePath("LetterInput"), NodePath("LetterInput2"), NodePath("LetterInput3") ]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -43.0
+margin_top = -11.0
+margin_right = -13.0
+margin_bottom = 52.0
+color = Color( 0.113725, 0.168627, 0.32549, 1 )
+
+[node name="LetterInput" type="Node2D" parent="."]
+position = Vector2( -28, 0 )
+script = ExtResource( 4 )
+
+[node name="Arrow" type="Sprite" parent="LetterInput"]
+texture = ExtResource( 2 )
+
+[node name="Arrow2" type="Sprite" parent="LetterInput"]
+position = Vector2( 0, 42 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LetterInput"]
+margin_left = -11.0
+margin_top = 10.0
+margin_right = 14.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 1 )
+text = "A"
+align = 1
+
+[node name="LetterInput2" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Arrow" type="Sprite" parent="LetterInput2"]
+texture = ExtResource( 2 )
+
+[node name="Arrow2" type="Sprite" parent="LetterInput2"]
+position = Vector2( 0, 42 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LetterInput2"]
+margin_left = -11.0
+margin_top = 10.0
+margin_right = 14.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 1 )
+text = "A"
+align = 1
+
+[node name="LetterInput3" type="Node2D" parent="."]
+position = Vector2( 28, 0 )
+script = ExtResource( 4 )
+
+[node name="Arrow" type="Sprite" parent="LetterInput3"]
+texture = ExtResource( 2 )
+
+[node name="Arrow2" type="Sprite" parent="LetterInput3"]
+position = Vector2( 0, 42 )
+scale = Vector2( 1, -1 )
+texture = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="LetterInput3"]
+margin_left = -11.0
+margin_top = 10.0
+margin_right = 14.0
+margin_bottom = 33.0
+custom_fonts/font = SubResource( 1 )
+text = "A"
+align = 1
