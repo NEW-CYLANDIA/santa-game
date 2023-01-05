@@ -9,10 +9,12 @@ signal got_score;
 func _ready():
 	pass # Replace with function body.
 
-func _on_HouseSpawner_present_landed(pos):
-	score += score_increment * combo;
+func _on_HouseSpawner_present_landed(pos, right_color):
+	var value_multiplier = 1;
+	if right_color: value_multiplier = 2;
+	score += (score_increment * value_multiplier) * combo;
 	Stats.score = score;
-	emit_signal("got_score", score_increment, combo, score);
+	emit_signal("got_score", score_increment * value_multiplier, combo, score);
 	combo += 1;
 
 func _on_Rudolph_hit_registered():

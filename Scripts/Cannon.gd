@@ -7,15 +7,22 @@ var max_angle=90;
 export(PackedScene) var presentScene:PackedScene;
 export(NodePath) var fire_particles_path;
 var fire_particles:CPUParticles2D;
+export(NodePath) var present_preview_path;
+var present_preview:Present
 export(NodePath) var sleighPath;
 var sleigh:Sleigh
 var old_sleigh_pos = Vector2(); 
 export var reload_time = 0.75;
 var reload_timer = 0; 
 var reload_rect_size = 5;
+
+var next_color = 0;
 func _ready():
 	sleigh = get_node(sleighPath);
 	fire_particles = get_node(fire_particles_path);
+	present_preview = get_node(present_preview_path);
+	next_color = Colors.get_random();
+	present_preview.set_color(next_color);
 	pass # Replace with function body.
 
 
@@ -36,8 +43,12 @@ func _process(delta):
 		var p:Present = presentScene.instance();
 		get_parent().get_parent().add_child(p);
 		p.position = position + get_parent().position;
-		p.shoot(get_vec());
+
+		p.shoot(get_vec(), next_color);
+		
 		sleigh.position += get_vec() * -7;
+		next_color = Colors.get_random();
+		present_preview.set_color(next_color);
 	old_sleigh_pos = sleigh.position;
 		
 func get_vec():

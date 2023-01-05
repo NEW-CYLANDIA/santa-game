@@ -43,7 +43,7 @@ func _process(delta):
 		select_rect.rect_position = select_rect.rect_position.linear_interpolate(select_want_pos,0.2);
 		if (Input.is_action_just_pressed("fire")):
 			_submit();
-		if (Input.is_action_just_pressed("leaderboard")):
+		if (Input.is_action_just_pressed("back")):
 			_cancel();
 	else:
 		select_rect.visible = false;

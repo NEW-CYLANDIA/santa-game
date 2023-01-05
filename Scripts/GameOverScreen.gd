@@ -21,7 +21,7 @@ func _process(delta):
 	if state == MenuState.NAME_SUBMITTED:
 		if (Input.is_action_just_pressed("fire")):
 			get_tree().change_scene("res://GameScene.tscn");
-		if (Input.is_action_just_pressed("leaderboard")):
+		if (Input.is_action_just_pressed("back")):
 			get_tree().change_scene("res://Leaderboard.tscn");
 
 func _on_NameInput_submitted():

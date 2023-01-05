@@ -12,5 +12,5 @@ func _process(delta):
 	if active:
 		if (Input.is_action_just_pressed("fire")):
 			get_tree().change_scene_to(scene);
-		if (Input.is_action_just_pressed("leaderboard")):
+		if (Input.is_action_just_pressed("back")):
 			get_tree().change_scene("res://Leaderboard.tscn");

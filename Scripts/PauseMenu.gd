@@ -26,7 +26,7 @@ func _process(delta):
 		if (Input.is_action_just_pressed("escape") && can_unpause):
 			
 			hide();
-		if (Input.is_action_just_pressed("leaderboard")):
+		if (Input.is_action_just_pressed("back")):
 			get_tree().change_scene("res://Title.tscn")
 		can_unpause = true;
 func _exit_tree():

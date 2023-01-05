@@ -1,23 +1,23 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Fonts/CasualEncounter.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Prefabs/SnowParticles.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/AToContinue.gd" type="Script" id=3]
-[ext_resource path="res://GameScene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/AToContinue.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/CasualEncounter.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Prefabs/SnowParticles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/GameScene.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 8
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 8
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 scene = ExtResource( 4 )
 
 [node name="CenterContainer" type="Control" parent="."]
@@ -74,4 +74,4 @@ text = "(Working title)"
 align = 1
 valign = 1
 
-[node name="Particles" parent="." instance=ExtResource( 2 )]
+[node name="Particles" parent="." instance=ExtResource( 3 )]

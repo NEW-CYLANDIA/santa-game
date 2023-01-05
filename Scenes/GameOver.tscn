@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Fonts/CasualEncounter.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/ScoreText.gd" type="Script" id=2]
-[ext_resource path="res://GameOverScreen.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/GameOverScreen.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/SnowParticles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/NameInput.tscn" type="PackedScene" id=5]
+
 
 [sub_resource type="DynamicFont" id=2]
 size = 8
